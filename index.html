@@ -167,13 +167,12 @@
                     const imageIndex = img.alt;
                     const rotation = img.getAttribute('data-rotation') || 0;
                     let rotationCode = 0;
-
                     // 회전 상태를 코드로 변환
                     switch (rotation) {
-                        case 0: rotationCode = 0; break;
-                        case 90: rotationCode = 1; break;
-                        case 180: rotationCode = 2; break;
-                        case 270: rotationCode = 3; break;
+                        case '0': rotationCode = 0; break;
+                        case '90': rotationCode = 1; break;
+                        case '180': rotationCode = 2; break;
+                        case '270': rotationCode = 3; break;
                     }
                     mapData += `${imageIndex}${rotationCode}`;
                 } else {
